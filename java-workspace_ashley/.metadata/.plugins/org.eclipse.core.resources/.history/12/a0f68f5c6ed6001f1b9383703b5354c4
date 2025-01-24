@@ -1,0 +1,18 @@
+package poo.fecha;
+
+public class FechaTest {
+
+	public static void main(String[] args) {
+		
+		Fecha f1 = new Fecha(14, 2, 2025);
+		System.out.println(f1.toStringFecha());
+		
+		Fecha f2 = new Fecha(16, 5, 2003);
+		System.out.println(f2.toStringFecha());
+		
+		Fecha f3 = new Fecha(14, 8, 2025);
+		System.out.println(f3.toStringFecha());
+		
+	}
+
+}

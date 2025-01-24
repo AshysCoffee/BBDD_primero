@@ -1,0 +1,32 @@
+package poo.fecha;
+
+public class FechaTest {
+
+	public static void main(String[] args) {
+		
+		Fecha f1 = new Fecha(14, 2, 2025);
+		System.out.println(f1.toStringFecha());
+		
+		Fecha f2 = new Fecha(16, 5, 2003);
+		System.out.println(f2.toStringFecha());
+		
+		Fecha f3 = new Fecha(32, 12, 1988);
+		System.out.println(f3.toStringFecha());
+		
+		Fecha f4 = new Fecha(5, 48, 2025);
+		System.out.println(f4.toStringFecha());
+
+		Fecha f5 = new Fecha(32, 17, 1988);
+		System.out.println(f5.toStringFecha());
+		
+		Fecha f6 = new Fecha(32, 17, -124);
+		System.out.println(f6.toStringFecha());
+		
+		Fecha f7 = new Fecha(30, 2, 2025);
+		System.out.println(f7.toStringFecha());
+		
+		Fecha f8 = new Fecha(31, 4, 2025);
+		System.out.println(f8.toStringFecha());
+	}
+
+}

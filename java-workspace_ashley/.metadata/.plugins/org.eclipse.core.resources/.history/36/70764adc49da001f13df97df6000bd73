@@ -1,0 +1,12 @@
+package poo.director;
+
+public class PeliculaTest {
+
+	public static void main(String[] args) {
+		
+		Pelicula p1 = new Pelicula();
+		
+
+	}
+
+}

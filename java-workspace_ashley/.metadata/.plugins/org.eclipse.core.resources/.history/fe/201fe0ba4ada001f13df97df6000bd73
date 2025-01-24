@@ -1,0 +1,17 @@
+package poo.director;
+
+public class PeliculaTest {
+
+	public static void main(String[] args) {
+		
+		Director d1 = new Director("Woody Allen", 1935, "Francia");
+		Pelicula p1 = new Pelicula();
+			p1.setTitulo("Manhattan");
+			p1.setAnno_creacion(1979);
+			p1.setDirector(d1);
+		System.out.println(p1.toStringPelicula());
+		
+
+	}
+
+}

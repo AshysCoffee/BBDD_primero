@@ -1,0 +1,11 @@
+package ejemplos.poo;
+
+public class EjemplosCositas {
+
+	public static void main(String[] args) {
+		String cad = "Mi perro \"Perico\" es de color blanco";
+		System.out.print(cad);
+
+	}
+
+}
