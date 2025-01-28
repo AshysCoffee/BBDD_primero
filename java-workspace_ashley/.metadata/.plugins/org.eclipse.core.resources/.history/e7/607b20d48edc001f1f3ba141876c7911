@@ -1,0 +1,16 @@
+package poo.calculadora;
+
+import java.util.Scanner;
+
+public class CalculadoraTest {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		Calculador c1 = new Calculador();
+		
+		System.out.println(c1.toStringCalculadora());
+	
+	}
+
+}

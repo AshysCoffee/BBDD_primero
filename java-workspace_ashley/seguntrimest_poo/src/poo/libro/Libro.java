@@ -5,23 +5,23 @@ import poo.persona.Persona;
 
 public class Libro{
 
-	private String titulo,editorial,ciudad,pais;
+	private String titulo,editorial,ciudad,pais, ISBN, edicion;
 	Persona autor;
 	Fecha fecha_edicion;
-	private int ISBN, paginas, edicion;
+	private int paginas;
 	
 	public Libro() {
 		
 	}
 	
-	public Libro(String titulo, Persona autor, String editorial, int ISBN) {
+	public Libro(String titulo, Persona autor, String editorial, String ISBN) {
 		this.titulo=titulo;
 		this.autor=autor;
 		this.editorial=editorial;
 		this.ISBN=ISBN;
 	}
 	
-	public Libro (String titulo, Persona autor, String editorial, String ciudad, String pais, Fecha fecha_edicion, int paginas, int edicion, int ISBN) {
+	public Libro (String titulo, Persona autor, String editorial, String ciudad, String pais, Fecha fecha_edicion, int paginas, String edicion, String ISBN) {
 		this.titulo=titulo;
 		this.autor=autor;
 		this.editorial=editorial;
@@ -83,11 +83,11 @@ public class Libro{
 	}
 	
 	
-	public void setISBN(int ISBN) {
+	public void setISBN(String ISBN) {
 		this.ISBN=ISBN;
 	}
 	
-	public int getISBN(){
+	public String getISBN(){
 		return ISBN;
 	}
 		
@@ -99,23 +99,25 @@ public class Libro{
 		return paginas;
 	}
 	
-	public void setEdicion(int edicion) {
+	public void setEdicion(String edicion) {
 		this.edicion=edicion;
 	}
 	
-	public int getEdicion(){
+	public String getEdicion(){
 		return edicion;
 	}
 	
 	public String toStringLibro () {
 		String s;
-		s=("Titulo: "+titulo+"\n");
+		s=("-----> LIBRO: \n");
+		s+=("Titulo: "+titulo+"\n");
 		s+=("Edición: "+edicion+"\n");
 		s+=("Editorial: "+editorial+"\n");
-		s+=("Autor: "+autor.toStringPersona()+"\n");
+		s+=("Autor: "+autor.toStringPersonaSimple()+"\n");
 		s+=("ISBN: "+ISBN+"\n");
 		s+=("Lugar: "+ciudad+","+pais+"\n");
-		s+=("Fecha: "+fecha_edicion.toStringFecha()+"\n");
+		s+=("Fecha: "+fecha_edicion.toStringFecha());
+		s+=("Páginas: "+paginas+"\n");
 		
 		return s;
 		
@@ -132,7 +134,6 @@ Título: Introduction to Java Programming
 3a. edición
 Autor: Liang, Y. Daniel
 ISBN: 0-13-031997-X
-Prentice-Hall, New Jersey (USA), viernes 16 de noviembre de
-2001
+Prentice-Hall, New Jersey (USA), viernes 16 de noviembre de 2001
 784 páginas
 */

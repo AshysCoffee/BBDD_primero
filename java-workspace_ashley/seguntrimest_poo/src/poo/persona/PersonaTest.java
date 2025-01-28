@@ -4,8 +4,12 @@ public class PersonaTest {
 
 	public static void main(String[] args) {
 		
-		Persona p1 = new Persona ("123456789P", "Luis", "Lucero Pérez");
+		Persona p1 = new Persona ("Luis", "Lucero Pérez");
 		System.out.println(p1.toStringPersona());
+		
+		Persona p2 = new Persona ("02581012L", "Carla", "Noruega Martín","Marrón");
+		System.out.println(p2.toStringPersona());
+		
 	}
 
 }

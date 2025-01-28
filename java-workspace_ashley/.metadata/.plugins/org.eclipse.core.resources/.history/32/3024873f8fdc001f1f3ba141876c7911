@@ -1,0 +1,22 @@
+package poo.calculadora;
+
+import java.util.Scanner;
+
+public class CalculadoraTest {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		Calculador c1 = new Calculador();
+		double numero=0;
+		
+		System.out.println(c1.toStringCalculadora());
+		System.out.println("");
+		System.out.println("Por favor, ingrese un número y la operación que quiere realizar: ");
+		numero=sc.nextDouble();
+		c1.setAcumulador(numero);
+		System.out.println("");
+		System.out.println(c1.toStringCalculadora());
+	}
+
+}

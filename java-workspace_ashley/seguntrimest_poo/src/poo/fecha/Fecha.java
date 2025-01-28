@@ -106,8 +106,7 @@ public class Fecha {
 	}
 
 		String s;
-			s=("-----Fecha:-----\n");
-			s+=(+dia+"/"+mes+"/"+anno+"\n");
+			s=(+dia+"/"+mes+"/"+anno+"\n");
 			return s+n;
 	
   }

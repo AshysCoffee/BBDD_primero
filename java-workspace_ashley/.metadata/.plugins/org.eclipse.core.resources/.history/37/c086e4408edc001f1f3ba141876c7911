@@ -1,0 +1,105 @@
+package poo.calculadora;
+
+public class Calculador {
+
+	private double acumulador, memoria1, memoria2;
+
+	public Calculador() {
+		this.acumulador = acumulador;
+		this.memoria1=0.0;
+		this.memoria2=0.0;
+	}
+////////////////
+	public double getAcumulador() {
+		return acumulador;
+	}
+
+	public void setAcumulador(double acumulador) {
+		this.acumulador = acumulador;
+	}
+
+	public double getMemoria1() {
+		return memoria1;
+	}
+
+	public void setMemoria1 (double memoria1) {
+		this.memoria1 = acumulador;
+	}
+
+	public double getMemoria2() {
+		return memoria2;
+	}
+
+	public void setMemoria2(double memoria2) {
+		this.memoria2 = acumulador;
+	}
+////////////////
+
+	public void sumar(double valor) {
+        acumulador += valor;
+    }
+
+    public void restar(double valor) {
+        acumulador -= valor;
+    }
+
+    public void multiplicar(double valor) {
+        acumulador *= valor;
+    }
+
+    public void dividir(double valor) {
+        if (valor != 0) {
+            acumulador /= valor;
+        } else {
+        	String s;
+            s=("Error: División por cero.");
+        }
+    }
+
+    public void porcentaje(double porcentaje) {
+        acumulador = acumulador * (porcentaje / 100);
+    }
+///////////  
+	
+    public void guardarMemoria1() {
+        memoria1 = acumulador;
+    }
+
+    public void guardarMemoria2() {
+        memoria2 = acumulador;
+    }
+
+    public void cargarDeMemoria1() {
+        acumulador = memoria1;
+    }
+
+    public void cargarDeMemoria2() {
+        acumulador = memoria2;
+    }
+
+    public void limpiarMemoria1() {
+        memoria1 = 0.0;
+    }
+
+    public void limpiarMemoria2() {
+        memoria2 = 0.0;
+    }
+
+    // Métodos para manejar el acumulador
+    public void limpiarAcumulador() {
+        acumulador = 0.0;
+    }
+
+    public double obtenerAcumulador() {
+        return acumulador;
+    }
+	
+	public String toStringCalculadora() {
+		String s;
+		s=("Memoria 1: " +memoria1+ "\n");
+		s+=("Memoria 2: " +memoria2+ "\n");
+		s+=("Resultado: ");
+		return s;
+	}
+	
+}

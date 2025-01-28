@@ -11,8 +11,7 @@ public class Persona {
 
 	//2.- Constructores
 	//Constructor que necesita dni, nombre y apellidos para crear un objeto de tipo Persona
-	public Persona (String dni, String nombre, String apellidos) {
-		this.dni=dni;
+	public Persona (String nombre, String apellidos) {
 		this.nombre=nombre;
 		this.apellidos=apellidos;
 	}
@@ -78,9 +77,15 @@ public class Persona {
 		return this.colorPelo;
 	}
 
+	public String toStringPersonaSimple() {
+		String s;
+		s= (apellidos+","+nombre);
+		return s;
+	}	
+		
 	public String toStringPersona() {
 		String s;
-		s= (dni+", "+nombre+", "+apellidos+", "+direccion+", "+colorOjos+", "+colorPelo);
+		s= (dni+", "+nombre+" "+apellidos+", "+direccion+", "+colorOjos+", "+colorPelo);
 		return s;
 	}
 	

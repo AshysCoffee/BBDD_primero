@@ -1,3 +1,2 @@
 
-public enum Madera {CACAO, MERRO,
-}
+public enum Madera {CACAO, MERRO, BLANCO}

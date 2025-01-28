@@ -1,0 +1,42 @@
+package poo.calculadora;
+
+public class Calculador {
+
+	private int acumulador, memoria1, memoria2;
+
+	public Calculador(int acumulador) {
+		this.acumulador = acumulador;
+	}
+////////////////
+	public int getAcumulador() {
+		return acumulador;
+	}
+
+	public void setAcumulador(int acumulador) {
+		this.acumulador = acumulador;
+	}
+
+	public int getMemoria1() {
+		return memoria1;
+	}
+
+	public void setMemoria1(int memoria1) {
+		this.memoria1 = memoria1;
+	}
+
+	public int getMemoria2() {
+		return memoria2;
+	}
+
+	public void setMemoria2(int memoria2) {
+		this.memoria2 = memoria2;
+	}
+	
+	public String toStringCalculadora() {
+		String s;
+		s=("Bienvenido a la calculadora");
+		s+=("Por favor, ingrese cualquier número");
+		return s;
+	}
+	
+}

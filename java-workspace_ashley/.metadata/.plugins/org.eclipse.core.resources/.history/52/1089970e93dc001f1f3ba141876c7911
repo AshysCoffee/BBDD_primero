@@ -1,0 +1,48 @@
+package poo.calculadora;
+
+import java.util.Scanner;
+
+public class CalculadoraTest {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		Calculador c1 = new Calculador();
+		double numero1=0;
+		double numero2=0;
+		char operacion = ' ';
+		
+		System.out.println(c1.toStringCalculadora());
+		System.out.println("Por favor, ingrese un número y la operación que quiere realizar [+, -, * , / ó %] o ponga . para terminar: ");
+		numero1=sc.nextDouble();
+		c1.setAcumulador(numero1);
+		operacion=sc.next().charAt(0);
+		while (operacion!='.') {
+			numero2=sc.nextDouble();
+			switch(operacion) {
+			case '+':
+                c1.sumar(numero1, numero2);
+                System.out.print(c1.toStringCalculadora());
+                break;
+            case '-':
+            	c1.restar(numero1, numero2);
+                System.out.print(c1.toStringCalculadora());
+                break;
+            case '*':
+            	c1.multiplicar(numero1, numero2);
+                System.out.print(c1.toStringCalculadora());
+                break;
+            case '/':
+            	c1.dividir(numero1, numero2);
+                System.out.print(c1.toStringCalculadora());
+                break;
+                
+            case '%':
+            	c1.porcentaje(numero1, numero2);
+                System.out.print(c1.toStringCalculadora());
+                break;    
+			}
+		}
+	}
+
+}
